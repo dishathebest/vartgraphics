@@ -1,0 +1,15 @@
+/* 
+    Created on : Mar 24, 2015, 11:36:55 AM
+    Author     : D!shathebest
+*/
+ul,li {margin: 0;padding: 0;list-style: none;}
+.red {color: #FF0000;}
+.green {color:#31b131;}
+.cursor_move {cursor: move;}
+
+.subcat_hierarchy {display: none;}
+.pro-img-display {width:100%;}
+.pro-img-display img{max-width:100%;}
+.sortable-placeholder { box-shadow: 0 0 9px 2px yellow inset;-webkit-box-shadow: 0px 0px 10px 5px yellow;}
+.summary{margin-top: 10px;text-align: center;}
+.imagebox_min_height {min-height: 400px;}
