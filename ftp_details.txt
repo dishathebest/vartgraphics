@@ -1,7 +1,0 @@
-http://vartgraphics.com/cpanel
-Username:vartgrap
-Password:Bw502Yrt6e
-
-database: vartgrap_vartgraphics
-user: vartgrap_vuser1
-passwoird: 72c6ZHUkxdua
