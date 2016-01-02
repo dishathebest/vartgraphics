@@ -4,7 +4,7 @@
 Powered by: <a href="#">d!shathebest (DKurb)</a>
 </div>
 <!-- # Footer Ends -->
-<a href="#home" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+
 
 
 

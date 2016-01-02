@@ -48,7 +48,7 @@
         <script src="<?= base_url() ?>js/respond.js"></script>
 
         <!-- gallery -->
-        <script src="<?= base_url() ?>js/jquery.js"></script>
+<!--        <script src="<?= base_url() ?>js/jquery.js"></script>-->
 
         <script src="<?= base_url() ?>js/jquery.validate.js"></script>
         <!-- custom script -->
@@ -86,7 +86,7 @@
                     <div class="container">
                         <div class="navbar-header">
                             <!-- Logo Starts -->
-                            <a class="navbar-brand" href="#home"><img src="<?= base_url() ?>images/logo.jpg" alt="logo"></a>
+                            <a class="navbar-brand outer" href="<?= base_url() ?>"><img src="<?= base_url() ?>images/logo.jpg" alt="logo" style="max-width: 25%"></a>
                             <!-- #Logo Ends -->
 
 
@@ -108,6 +108,7 @@
                                 <li class=""><a href="#works">Works</a></li>
                                 <li class=""><a href="#partners">Partners</a></li>
                                 <li class=""><a href="#contact">Contact</a></li>
+                                <li class=""><a class="outer" href="<?= base_url() ?>gallery">Gallery</a></li>
                             </ul>
                         </div>
                         <!-- #Nav Ends -->

@@ -49,13 +49,13 @@
     <div class="row">
         <div style="visibility: visible; animation-name: fadeInLeft;" class="col-sm-6 wowload fadeInLeft animated">
             <h4><i class="fa fa-camera-retro"></i> <?= $introduction->page_title ?></h4>
-<?= $introduction->content ?>
+            <?= $introduction->content ?>
 
 
         </div>
         <div style="visibility: visible; animation-name: fadeInRight;" class="col-sm-6 wowload fadeInRight animated">
             <h4><i class="fa fa-coffee"></i> <?= $passion->page_title ?></h4>
-<?= $passion->content ?>
+            <?= $passion->content ?>
         </div>
     </div>
 
@@ -85,16 +85,17 @@
 
 <!-- works -->
 <div id="works" class=" clearfix grid">
-<?php foreach ($categoryList as $cat) { ?>
+    <?php foreach ($categoryList as $cat) { ?>
         <figure style="visibility: visible; animation-name: fadeInUp;" class="effect-oscar  wowload fadeInUp animated">
-            <img src="<?= base_url() ?>images/home_category/<?= $cat->image_home ?>" alt="img01">
+            <img src="<?= base_url() ?>images/category/<?= $cat->image_home ?>" alt="img01">
+            <div class="overlay1"></div>
             <figcaption>
                 <h2><?= $cat->cat_name ?></h2>
                 <p><?= $cat->cat_description ?><br>
-                    <a href="http://thebootstrapthemes.com/live/thebootstrapthemes-photography/images/portfolio/1.jpg" title="1" data-gallery="">View more</a></p>            
+                    <a href="<?= base_url() ?>gallery/index/<?= str_replace(" ", "_", (strtolower($cat->cat_name))) ?>" title="1" data-gallery="">View more</a></p>            		
             </figcaption>
         </figure>
-<?php } ?>
+    <?php } ?>
 </div>
 <!-- works -->
 
@@ -118,10 +119,10 @@
                     foreach ($testimonialList as $testimonial) {
                         ?>
                         <div class="item animated bounceInRight row<?php
-                             if ($j == "0") {
-                                 echo " active";
-                             }
-                             ?>">
+                        if ($j == "0") {
+                            echo " active";
+                        }
+                        ?>">
                                  <?php
                                  $testi_image = "images/user-placeholder.png";
                                  if ($testimonial->image != '') {
@@ -134,10 +135,10 @@
                                 <span><?= $testimonial->name ?> - <b><?= $testimonial->company_name ?></b></span>
                             </div>
                         </div>
-    <?php
-    $j++;
-}
-?>
+                        <?php
+                        $j++;
+                    }
+                    ?>
 
                 </div>
 
@@ -148,10 +149,10 @@
                     foreach ($testimonialList as $testimonial) {
                         ?>
                         <li class="<?= $j == "0" ? "active" : "" ?>" data-target="#carousel-testimonials" data-slide-to="<?= $j ?>"></li>
-    <?php
-    $j++;
-}
-?>
+                        <?php
+                        $j++;
+                    }
+                    ?>
                 </ol>
                 <!-- Indicators -->
             </div>
@@ -163,7 +164,7 @@
 
 
     <!-- team -->
-    <h3 style="visibility: visible; animation-name: fadeInUp;" class="text-center  wowload fadeInUp animated">Our team</h3>
+    <!--<h3 style="visibility: visible; animation-name: fadeInUp;" class="text-center  wowload fadeInUp animated">Our team</h3>
     <p style="visibility: visible; animation-name: fadeInLeft;" class="text-center  wowload fadeInLeft animated">Our creative team that is making everything possible</p>
     <div style="visibility: visible; animation-name: fadeInUpBig;" class="row grid team  wowload fadeInUpBig animated">	
         <div class=" col-sm-3 col-xs-6">
@@ -203,7 +204,7 @@
         </div>
 
 
-    </div>
+    </div>-->
     <!-- team -->
 
 </div>
@@ -236,6 +237,21 @@
             </div>
         </div>
     </div>
+</div>
+<div class="highlight-info">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+            var mapProp = {
+                center: new google.maps.LatLng(51.508742, -0.120850),
+                zoom: 5,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <div id="googleMap" style="width:100%;height:295px;"></div>
 </div>
 <!-- About Ends -->
 
@@ -276,3 +292,4 @@
     </div>
 </div>
 <!--Contact Ends-->
+<a href="#home" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>

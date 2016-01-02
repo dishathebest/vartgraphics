@@ -24,7 +24,7 @@
 		foreach ($parentCategoryList as $cat) {
 		    ?>
 		    <div class="cat_main">
-			<div><?= form_checkbox("category[" . $cat->cat_id . "]", $cat->cat_id, ($mode == "edit" && key_exists($cat->cat_id, $cat_ids_arr) ? TRUE : FALSE), 'class="cat_hierarchy" level="0"') . " " . $cat->cat_name ?></div>
+			<div><?= form_checkbox("category[" . $cat->cat_id . "]", $cat->cat_id, ($mode == "edit" && in_array($cat->cat_id, $cat_ids_arr) ? TRUE : FALSE), 'class="cat_hierarchy" level="0"') . " " . $cat->cat_name ?></div>
 			<?php if ($mode == "edit") { ?>
 			    <?php
 			    if (isset($cat->subcategory) && count($cat->subcategory) > 0) {
